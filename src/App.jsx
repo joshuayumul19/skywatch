@@ -1,11 +1,21 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+import TopButtons from "./components/TopButtons";
+import Inputs from "./components/Inputs";
+import TimeAndLocation from "./components/TimeAndLocation";
+import TemperatureAndDetails from "./components/TemperatureAndDetails";
+import Forecast from "./components/Forecast";
 
 const App = () => {
 	return (
 		<>
-			<h1 className="text-red-500 text-center text-5xl">Hello World!</h1>
-			<Unicons.UilReact />
+			<div className="mx-auto max-w-screen-md mt-4 py-5 px-20 bg-gradient-to-br from-cyan-600 to-blue-700 h-fit shadow-xl shadow-gray-400 rounded">
+				<TopButtons />
+				<Inputs />
+				<TimeAndLocation />
+				<TemperatureAndDetails />
+				<Forecast title="hourly forecast" />
+				<Forecast title="daily forecast" />
+			</div>
 		</>
 	);
 };
